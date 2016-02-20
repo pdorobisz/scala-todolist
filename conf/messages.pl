@@ -1,0 +1,1 @@
+tasks.title.addNewTask=Dodaj nowe zadanie

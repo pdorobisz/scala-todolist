@@ -1,0 +1,8 @@
+tasks.title.main=Todo list
+tasks.title.addNewTask=Add a new task
+tasks.title.tasksNumber=task(s)
+
+tasks.button.create=Create
+tasks.button.delete=Delete
+
+tasks.label.taskLabel=label

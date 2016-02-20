@@ -1,7 +1,26 @@
-@(message: String)
+@(tasks: List[Task], taskForm: Form[String])(implicit messages: Messages)
 
-@main("Welcome to Play") {
+    @import helper._
 
-    @play20.welcome(message)
+    @main(Messages("tasks.title.main")) {
 
-}
+        <h1>@tasks.size @Messages("tasks.title.tasksNumber")</h1>
+
+        <ul>
+        @tasks.map { task =>
+            <li>
+                @task.label
+                @form(routes.TodoController.deleteTask(task.id)) {
+                    <input type="submit" value="@Messages("tasks.button.delete")">
+                    }
+            </li>
+        }
+        </ul>
+
+        <h2>@Messages("tasks.title.addNewTask")</h2>
+
+        @form(routes.TodoController.newTask) {
+            @inputText(taskForm(Messages("tasks.label.taskLabel")))
+            <input type="submit" value="@Messages("tasks.button.create")">
+        }
+    }
