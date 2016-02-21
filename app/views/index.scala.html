@@ -10,7 +10,7 @@
         @tasks.map { task =>
             <li>
                 @task.label
-                @form(routes.TodoController.deleteTask(task.id)) {
+                @form(routes.Application.deleteTask(task.id)) {
                     <input type="submit" value="@Messages("tasks.button.delete")">
                     }
             </li>
@@ -19,7 +19,7 @@
 
         <h2>@Messages("tasks.title.addNewTask")</h2>
 
-        @form(routes.TodoController.newTask) {
+        @form(routes.Application.newTask) {
             @inputText(taskForm(Messages("tasks.label.taskLabel")))
             <input type="submit" value="@Messages("tasks.button.create")">
         }
