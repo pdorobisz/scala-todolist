@@ -1,1 +1,1 @@
-tasks.title.addNewTask=Dodaj nowe zadanie
+taskList.title.addNewTask=Dodaj nowe zadanie

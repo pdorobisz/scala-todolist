@@ -1,10 +1,11 @@
-tasks.title.main=Todo list
-tasks.title.addNewTask=Add a new task
-tasks.title.tasksNumber=task(s)
+main.title=Todo list
 
-tasks.button.create=Create
-tasks.button.delete=Delete
+taskList.title.addNewTask=Add a new task
+taskList.title.tasksNumber=task(s)
 
-tasks.label.taskLabel=label
+taskList.button.create=Create
+taskList.button.delete=Delete
+
+taskList.label.taskLabel=label
 
 taskDetails.button.allTasks=View all tasks
