@@ -10,7 +10,7 @@ case class Task(id: Long, label: String)
 object Task {
 
   def all(): List[Task] = DB.withConnection { implicit c =>
-    SQL("select * from task").as(task *)
+    SQL("select * from task").as(task.*)
   }
 
   def create(label: String) {
@@ -18,6 +18,14 @@ object Task {
       SQL("insert into task (label) values ({label})").on(
         'label -> label
       ).executeUpdate()
+    }
+  }
+
+  def read(id: Long): Option[Task] = {
+    DB.withConnection { implicit c =>
+      SQL("select * from task where id = {id}").on(
+        'id -> id
+      ).as(task.singleOpt)
     }
   }
 

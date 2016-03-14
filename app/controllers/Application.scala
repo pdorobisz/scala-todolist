@@ -31,6 +31,13 @@ class Application extends BaseController {
     Redirect(routes.Application.tasks)
   }
 
+  def getTask(id: Long) = Action {
+    Task.read(id) match {
+      case Some(task) => Ok(views.html.taskDetails(task))
+      case None => Redirect(routes.Application.tasks)
+    }
+  }
+
   val taskForm = Form(
     "label" -> nonEmptyText
   )

@@ -6,3 +6,5 @@ tasks.button.create=Create
 tasks.button.delete=Delete
 
 tasks.label.taskLabel=label
+
+taskDetails.button.allTasks=View all tasks
