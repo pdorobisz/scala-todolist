@@ -12,7 +12,7 @@ class Application extends BaseController {
     Redirect(routes.Application.tasks)
   }
 
-  def tasks = Action {
+  def tasks = Action { implicit request =>
     Ok(views.html.taskList(Task.all(), taskForm))
   }
 
