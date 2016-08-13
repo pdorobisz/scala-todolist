@@ -1,9 +1,9 @@
 package models
 
-import anorm._
 import anorm.SqlParser._
-import play.api.db._
+import anorm._
 import play.api.Play.current
+import play.api.db._
 
 case class Task(id: Long, label: String)
 
